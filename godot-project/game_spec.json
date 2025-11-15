@@ -1,0 +1,273 @@
+{
+  "game": {
+    "name": "Path Guardians",
+    "type": "2D",
+    "description": "A strategic tower defense game where players build and upgrade towers with unique abilities to stop waves of enemies traversing distinct paths. Collect resources from defeated foes to enhance defenses and survive escalating threats.",
+    "genre": "strategy",
+    "version": "1.0.0"
+  },
+  "settings": {
+    "window": {
+      "width": 1280,
+      "height": 720,
+      "resizable": true
+    },
+    "physics": {
+      "enabled": true,
+      "gravity": {
+        "x": 0,
+        "y": 980
+      }
+    },
+    "rendering": {}
+  },
+  "scenes": [
+    {
+      "name": "Main",
+      "type": "2D",
+      "path": "res://scenes/Main.tscn",
+      "nodes": [
+        {
+          "name": "Root",
+          "type": "Node2D",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "children": [
+            {
+              "name": "Defender",
+              "type": "CharacterBody2D",
+              "position": {
+                "x": 100,
+                "y": 300,
+                "z": 0
+              },
+              "children": [
+                {
+                  "name": "Sprite2D",
+                  "type": "Sprite2D",
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "properties": {
+                    "texture": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Camera",
+              "type": "Camera2D",
+              "position": {
+                "x": 0,
+                "y": 0,
+                "z": 5
+              },
+              "properties": {}
+            },
+            {
+              "name": "Goblin Scout",
+              "type": "CharacterBody2D",
+              "position": {
+                "x": 300,
+                "y": 300,
+                "z": 0
+              },
+              "children": [
+                {
+                  "name": "Sprite2D",
+                  "type": "Sprite2D",
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "properties": {
+                    "texture": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Harpy",
+              "type": "CharacterBody2D",
+              "position": {
+                "x": 400,
+                "y": 300,
+                "z": 0
+              },
+              "children": [
+                {
+                  "name": "Sprite2D",
+                  "type": "Sprite2D",
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "properties": {
+                    "texture": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Troll Brute",
+              "type": "CharacterBody2D",
+              "position": {
+                "x": 500,
+                "y": 300,
+                "z": 0
+              },
+              "children": [
+                {
+                  "name": "Sprite2D",
+                  "type": "Sprite2D",
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "properties": {
+                    "texture": ""
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Boss Dragon",
+              "type": "CharacterBody2D",
+              "position": {
+                "x": 600,
+                "y": 300,
+                "z": 0
+              },
+              "children": [
+                {
+                  "name": "Sprite2D",
+                  "type": "Sprite2D",
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "properties": {
+                    "texture": ""
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "camera": {
+        "type": "Camera2D",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    }
+  ],
+  "assets": {
+    "sprites": [
+      {
+        "name": "player_base",
+        "path": "res://assets/sprites/base.png",
+        "type": "structure"
+      },
+      {
+        "name": "basic_tower",
+        "path": "res://assets/sprites/basic_tower.png",
+        "type": "tower"
+      },
+      {
+        "name": "sniper_tower",
+        "path": "res://assets/sprites/sniper_tower.png",
+        "type": "tower"
+      },
+      {
+        "name": "aoe_tower",
+        "path": "res://assets/sprites/aoe_tower.png",
+        "type": "tower"
+      },
+      {
+        "name": "goblin_scout",
+        "path": "res://assets/sprites/goblin.png",
+        "type": "enemy"
+      },
+      {
+        "name": "harpy",
+        "path": "res://assets/sprites/harpy.png",
+        "type": "enemy"
+      },
+      {
+        "name": "troll_brute",
+        "path": "res://assets/sprites/troll.png",
+        "type": "enemy"
+      },
+      {
+        "name": "boss_dragon",
+        "path": "res://assets/sprites/dragon.png",
+        "type": "enemy"
+      },
+      {
+        "name": "forest_bg",
+        "path": "res://assets/sprites/forest_bg.png",
+        "type": "background"
+      },
+      {
+        "name": "desert_bg",
+        "path": "res://assets/sprites/desert_bg.png",
+        "type": "background"
+      },
+      {
+        "name": "mountain_bg",
+        "path": "res://assets/sprites/mountain_bg.png",
+        "type": "background"
+      }
+    ],
+    "sounds": [
+      {
+        "name": "tower_build",
+        "path": "res://assets/sounds/build.wav",
+        "type": "sfx"
+      },
+      {
+        "name": "tower_shoot",
+        "path": "res://assets/sounds/shoot.wav",
+        "type": "sfx"
+      },
+      {
+        "name": "enemy_death",
+        "path": "res://assets/sounds/death.wav",
+        "type": "sfx"
+      },
+      {
+        "name": "upgrade",
+        "path": "res://assets/sounds/upgrade.wav",
+        "type": "sfx"
+      },
+      {
+        "name": "wave_start",
+        "path": "res://assets/sounds/wave_start.wav",
+        "type": "sfx"
+      }
+    ],
+    "music": [
+      {
+        "name": "main_theme",
+        "path": "res://assets/music/main_theme.ogg"
+      },
+      {
+        "name": "boss_theme",
+        "path": "res://assets/music/boss_theme.ogg"
+      },
+      {
+        "name": "victory",
+        "path": "res://assets/music/victory.ogg"
+      }
+    ]
+  },
+  "scripts": []
+}
